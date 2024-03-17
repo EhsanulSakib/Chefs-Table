@@ -1,11 +1,11 @@
 import { CiClock2 } from "react-icons/ci";
 import { AiOutlineFire } from "react-icons/ai";
 
-const RecipeCard = ({Card}) => {
+const RecipeCard = ({Card,handleCook,numOfItem}) => {
     return (
-        <div className="card w-11/12 m-auto bg-base-100 shadow-xl">
+        <div className="card w-11/12 m-auto bg-base-100 shadow-xl h-[700px]">
   <figure className="px-10 pt-10">
-    <img src={Card.recipe_image} alt="Recipe" className="rounded-xl h-52 w-full object-cover" />
+    <img src={Card.recipe_image} alt="Recipe" className="rounded-xl h-48 w-full object-cover" />
   </figure>
   <div className="my-8 flex flex-col gap-4 w-11/12 m-auto text-[#282828]">
     <h2 className="card-title font-bold text-left text-xl">{Card.recipe_name}</h2>
@@ -17,7 +17,7 @@ const RecipeCard = ({Card}) => {
         </h2>
         <ul className="ml-12 my-4 text-sm font-normal text-[rgb(135,135,135)]">
             {
-                Card.ingredients.map(item=><li className=" list-disc" key={Card.recipe_id}>{item}</li>)                    
+                Card.ingredients.map((item,idx)=><li className=" list-disc" key={idx}>{item}</li>)                    
             }            
         </ul>
     </div>
@@ -36,7 +36,7 @@ const RecipeCard = ({Card}) => {
 
 
     <div className="card-actions">
-      <button className="btn btn-success">Want to Cook</button>
+      <button className="btn btn-success" onClick={() => handleCook(Card)}>Want to Cook</button>
     </div>
   </div>
 </div>

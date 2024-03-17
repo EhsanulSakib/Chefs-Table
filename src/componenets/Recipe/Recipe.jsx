@@ -1,14 +1,34 @@
 import { useEffect, useState } from "react";
 import RecipeCard from "../RecipeCard/RecipeCard";
+import Cooking from "../Cooking/Cooking";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipe = () => {
+    let counter = 1;
     const [Cards, setCards] = useState([])
+    const [Cook,setCook] = useState([])
+    const [TItems,setTItems] = useState(0)
+
+
+    const handleCook = item=>{
+        if(Cook.find(cook=> cook.recipe_id === item.recipe_id)){
+            toast.error("Item Already Added!")
+        }
+        else{
+            let newItem = [...Cook,item]
+            setCook(newItem)
+            let total = TItems+1
+            setTItems(total)
+        }
+    }
 
     useEffect(()=>{
         fetch('recipes.json')
         .then(res => res.json())
         .then(data => setCards(data))
     },[])
+
 
     return (
         <div>
@@ -21,35 +41,32 @@ const Recipe = () => {
             <div className="recipe-container flex flex-col lg:flex-row mt-4 lg:mt-16">
                 <div className="items flex-1 grid grid-cols-1 md:grid-cols-2 gap-y-8 ">
                     {
-                      Cards.map(Card => <RecipeCard Card={Card}></RecipeCard>)  
+                      Cards.map(Card => <RecipeCard key={Card.recipe_id} Card={Card} handleCook={handleCook} numOfItem={TItems}></RecipeCard>)  
                     }
                 </div>
 
-                <div className="processing my-4 lg:my-0 lg:ml-4 border border-[#28282833] p-4">
-                    <h2 className=" font-semibold text-lg md:text-xl text-center">Want to cook: 1</h2>
+                <div className="processing my-4 lg:my-0 lg:ml-4 border border-[#28282833] p-4 rounded-xl">
+                    <h2 className=" font-semibold text-lg md:text-xl text-center">Want to cook: {TItems}</h2>
 
                     {/* table */}
-                    <table className="my-6">
+                    <table className="my-6 w-full">
                         <thead className="text-sm">
-                            <th className="w-4 pl-2 pr-1"></th>
-                            <th className="w-4 px-1">Name</th>
-                            <th className="w-8 px-1">Time</th>
-                            <th className="w-8 px-1">Calories</th>
-                            <th className="pl-1 pr-2"></th>
+                            <th className="w-4 md:w-16 lg:w-4 pl-2 pr-1"></th>
+                            <th className="w-4 md:w-16 lg:w-4 px-1">Name</th>
+                            <th className="w-4 md:w-16 lg:w-4 px-1">Time</th>
+                            <th className="w-4 md:w-16 lg:w-4 px-1">Calories</th>
+                            <th className="w-4 md:w-16 lg:w-4 pl-1 pr-2"></th>
                         </thead>
                         
-                        {
-                            <tr>
-                                <td className="w-4 pl-2 pr-1">1</td>
-                                <td className="w-4 px-1">Grill Chicken Tikka</td>
-                                <td className="w-4 px-1">20 minutes</td>
-                                <td className="w-4 px-1">150 calories</td>
-                                <td className="px-2"><button className="btn btn-success ">Preparing</button></td>
-                            </tr>
-                        }
+                        <tbody>
+                            {
+                                Cook.map((cook,idx) => <Cooking key={idx} cook={cook} counter={counter+idx}></Cooking>)
+                            }
+                        </tbody>
                     </table>
                 </div>
             </div>
+            <ToastContainer/>
         </div>
         
     );
