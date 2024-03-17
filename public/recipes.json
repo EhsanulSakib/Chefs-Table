@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_image": "https://s9.gifyu.com/images/SUYbG.jpg",
+      "recipe_id": "01",
+      "recipe_name": "Grilled Chicken Salad",
+      "short_description": "Healthy and satisfying salad featuring tender grilled chicken breast, mixed greens, and assorted veggies.",
+      "ingredients": ["300 g grilled chicken breast", "150 g mixed salad greens", "100 g cherry tomatoes", "50 g sliced almonds"],
+      "preparing_time": 30,
+      "calories": 280
+    },
+    {
+      "recipe_image": "https://s9.gifyu.com/images/SUYbJ.jpg",
+      "recipe_id": "02",
+      "recipe_name": "Vegetable Soup",
+      "short_description": "Comforting and nourishing soup filled with a variety of fresh vegetables and aromatic herbs.",
+      "ingredients": ["500 g mixed vegetables (carrots, celery, potatoes, onions)", "1 liter vegetable broth", "2 cloves garlic", "1 tsp dried thyme"],
+      "preparing_time": 35,
+      "calories": 120
+    },
+    {
+      "recipe_image": "https://s9.gifyu.com/images/SUYbA.jpg",
+      "recipe_id": "03",
+      "recipe_name": "Margarita Pizza",
+      "short_description": "Classic Italian pizza topped with tangy tomato sauce, fresh mozzarella cheese, and fragrant basil leaves.",
+      "ingredients": ["300 g pizza dough", "200 ml tomato sauce", "200 g fresh mozzarella cheese", "Fresh basil leaves"],
+      "preparing_time": 25,
+      "calories": 320
+    },
+    {
+      "recipe_image": "https://s9.gifyu.com/images/SUYbB.jpg",
+      "recipe_id": "04",
+      "recipe_name": "Beef Tacos",
+      "short_description": "Tasty and satisfying tacos filled with seasoned ground beef, crunchy lettuce, and zesty salsa.",
+      "ingredients": ["300 g ground beef", "8 taco shells", "100 g shredded lettuce", "100 g diced tomatoes", "50 g shredded cheddar cheese"],
+      "preparing_time": 35,
+      "calories": 350
+    },
+    {
+      "recipe_image": "https://s9.gifyu.com/images/SUYbP.jpg",
+      "recipe_id": "05",
+      "recipe_name": "Pad Thai",
+      "short_description": "Delicious Thai stir-fried noodles with tofu, bean sprouts, and a tangy tamarind sauce.",
+      "ingredients": ["200 g rice noodles", "150 g tofu", "100 g bean sprouts", "50 g chopped peanuts", "2 eggs"],
+      "preparing_time": 40,
+      "calories": 380
+    },
+    {
+      "recipe_image": "https://s9.gifyu.com/images/SUYbO.jpg",
+      "recipe_id": "06",
+      "recipe_name": "Apple Pie",
+      "short_description": "Classic American dessert featuring tender apples baked in a flaky crust, served warm with a scoop of vanilla ice cream.",
+      "ingredients": ["6 large apples", "200 g granulated sugar", "100 g all-purpose flour", "50 g butter", "1 tsp ground cinnamon"],
+      "preparing_time": 60,
+      "calories": 280
+    }
+  ]
+  

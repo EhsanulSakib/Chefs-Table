@@ -1,11 +1,11 @@
-import user_icon from "../../public/images/user_icon.png"
+import user_icon from "../../../public/images/user_icon.png"
 import { IoIosSearch } from "react-icons/io";
 
 export default function Navbar() {
   return (
     <div className="navbar flex justify-between mt-1 md:mt-2 lg:mt-4">
   <div className="flex">
-    <a className="btn btn-ghost text-lg md:text-2xl">Recipe Calories</a>
+    <a className="btn btn-ghost text-lg md:text-2xl font-extrabold">Recipe Calories</a>
   </div>
 
     <div className="middle hidden lg:block">
@@ -45,7 +45,7 @@ export default function Navbar() {
           <img alt="user icon" src={user_icon} />
         </div>
       </div>
-      <ul tabIndex="0" className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content  rounded-box w-52 text-sm">
+      <ul tabIndex="0" className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-white  rounded-box w-52 text-sm">
       <li><a href="#home">Home</a></li>
         <li><a href="#recipes">Recipes</a></li>
         <li><a href="#about">About</a></li>

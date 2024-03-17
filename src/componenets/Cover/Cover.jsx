@@ -11,8 +11,8 @@ export default function Cover() {
         <p className="text-xs md:text-sm lg:text-lg mt-2 lg:mt-4">Savor delectable flavors, indulge in exquisite ambiance, and experience unparalleled service at our captivating restaurant. Join us today!</p>
 
         <div className="flex flex-col md:flex-row gap-2 lg:gap-4  mt-4 lg:mt-8">
-        <button className="btn btn-success text-white">Explore Now</button>
-        <button className="btn btn-outline text-white">Get Feedback</button>
+        <button className="btn btn-success text-white rounded-xl">Explore Now</button>
+        <button className="btn btn-outline text-white rounded-xl">Get Feedback</button>
         </div>
 
       </div>
